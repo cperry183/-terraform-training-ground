@@ -1,0 +1,22 @@
+# Lab 6: Remote Backend Configuration
+# Copy this to backend.tf and fill in your values
+
+terraform {
+  backend "s3" {
+    # S3 bucket for state storage
+    bucket = "your-terraform-state-bucket"
+    
+    # Object key in the bucket
+    # Use different keys for different environments
+    key = "terraform.tfstate"
+    
+    # AWS region
+    region = "us-east-1"
+    
+    # Enable encryption at rest
+    encrypt = true
+    
+    # DynamoDB table for state locking
+    dynamodb_table = "terraform-locks"
+  }
+}

@@ -1,0 +1,25 @@
+# Lab 3: ECS Fargate Configuration
+# Copy to terraform.tfvars
+
+aws_region      = "us-east-1"
+environment     = "dev"
+
+# Use your Docker image from Lab 2 (pushed to ECR or Docker Hub)
+# Format: registry/image:tag
+# Example: 123456789012.dkr.ecr.us-east-1.amazonaws.com/lab2-app:latest
+# Or: your-dockerhub-username/lab2-app:latest
+container_image = "nginx:latest"  # Replace with your image
+container_port  = 5000
+
+# Task sizing
+task_cpu    = "256"    # 256, 512, 1024, 2048, 4096
+task_memory = "512"    # Must be compatible with CPU
+
+# Scaling
+desired_count  = 2
+max_capacity   = 4
+
+# Logging
+log_retention_days = 7
+
+app_version = "1.0.0"

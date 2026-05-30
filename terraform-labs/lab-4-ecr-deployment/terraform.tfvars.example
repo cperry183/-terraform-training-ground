@@ -1,0 +1,5 @@
+# Lab 4: ECR Repository Configuration
+
+aws_region      = "us-east-1"
+environment     = "dev"
+repository_name = "lab4-app"
