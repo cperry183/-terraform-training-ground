@@ -1,1 +1,1 @@
-# -terraform-training-ground
+# terraform-training-ground
