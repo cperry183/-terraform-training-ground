@@ -1,2 +1,32 @@
 # macOS
 .DS_Store
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# Terraform plan files
+*.tfplan
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform lock file (uncomment if you do not want to track it)
+# .terraform.lock.hcl
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
